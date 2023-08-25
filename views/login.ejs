@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Remove Bootstrap CSS link -->
+	<link href="/styles.css" rel="stylesheet" />
+
+	<!-- Add Tailwind CSS link -->
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+	<title>Author Login</title>
+</head>
+
+<body class="bg-gray-100">
+	<div class="min-h-screen flex items-center justify-center">
+		<div class="max-w-md w-full bg-white p-6 rounded-lg shadow-md">
+			<h1 class="text-2xl font-semibold mb-6">Author Login</h1>
+			<!-- Alert shown when user enters wrong password -->
+			<% if (pass_error) { %>
+				<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+					<span class="block sm:inline">You entered a wrong username or password</span>
+				</div>
+			<% } %>
+			<form action="login" method="POST">
+				<div class="mb-4">
+					<label for="username" class="block text-gray-700">Username:</label>
+					<input required type="text" name="login_username" id="login_username" class="w-full border border-gray-300 rounded-md px-3 py-2">
+				</div>
+				<div class="mb-4">
+					<label for="password" class="block text-gray-700">Password:</label>
+					<input required type="password" name="login_password" id="login_password" class="w-full border border-gray-300 rounded-md px-3 py-2">
+				</div>
+				<div class="flex flex-row justify-between">
+					<button type="submit" class="bg-blue-500 text-white px-4 py-1.5 rounded-md">Login</button>
+					<a href="reader-home" class="bg-green-500 text-white text-right px-4 py-2 rounded-md">Reader Page</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
