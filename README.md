@@ -1,4 +1,4 @@
-### CM2040 Database Networks and the Web
+### Blog Page
 
 #### AUTHOR USERNAME AND PASSWORD
 Username: author
